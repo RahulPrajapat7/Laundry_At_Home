@@ -1,0 +1,30 @@
+.price {
+  background-color: aliceblue;
+  padding: 15px;
+}
+.gridItem {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.price-table {
+  height: 75vh;
+  overflow: auto;
+}
+.item {
+  background-color: white;
+  max-width: 500px;
+  box-shadow: 1px 2px 1px blue;
+}
+.h3Class1{
+    border-radius: 30px;
+    background-color: #51f2ffb5;
+    padding:0px 55px 0px 55px ;
+    box-shadow: 1px 2px 3px 1px #2f3333b5;
+}
+.h3Class2{
+    border-radius: 30px;
+    background-color: #51f2ffb5;
+    padding:0px 55px 0px 55px ;
+    box-shadow: 1px 2px 3px 1px #2f3333b5;
+}
