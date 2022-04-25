@@ -1,0 +1,7 @@
+.cart {
+  border: 2px solid #f5f1f1;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 1px #a2cbf1;
+  width: 600px;
+  position: sticky; top: 5; z-index: 100;
+}

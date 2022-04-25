@@ -1,20 +1,30 @@
-.navbar {
-  background-image: linear-gradient(to right, white, #accbd1, white);
+.navbar-nav .active{
+  background-color: rgb(186, 249, 255);
+  border-bottom: 5px solid rgb(69, 187, 255);
+  
+}
+.navbtn {
+  /* background-image: linear-gradient(to right, white, #accbd1, white); */
+  background-color: #adebffd9;
 }
 
+.nav-item{
+  padding: 25px 10px 25px 10px;
+  margin: 0px 7px ;
+ }
 .nav-item a {
   text-decoration: none;
-  padding: 25px 10px 25px 10px;
+  /* padding: 25px 10px 25px 10px; */
   color: black;
   font-weight: 500;
 }
 
-a:hover {
-  background-color: rgb(242, 249, 250);
-  border-bottom: 5px solid rgb(112, 209, 238);
+.nav-item:hover {
+  background-color: rgb(186, 249, 255);
+  border-bottom: 5px solid rgb(69, 187, 255);
 }
 .logSign {
-  padding: 0px 10px 0px 10px;
+  padding: 20px 10px 0px 10px;
 }
 .logSign button{
  background-color: rgb(112, 209, 238);
@@ -24,10 +34,5 @@ button:hover{
   color:white;
 }
 @media screen and (max-width:768px){
-  .navbar-nav{
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-    width: 50%;
-    margin-left: auto;
-    align-items: center;
-  }
+  
 }

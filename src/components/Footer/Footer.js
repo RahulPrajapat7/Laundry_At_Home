@@ -1,13 +1,40 @@
-import React from 'react'
-import "./Footer.css"
-export default function Footer() {
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Footer.css";
+
+function Footer() {
   return (
-    <div className="Footer container">
-      {/* <div className="foot-cont1">About</div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laboriosam quae aliquid cumque est, ea voluptatum voluptates veniam aspernatur facilis blanditiis praesentium facere distinctio?</p>
-      <div className="foot-cont2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, aliquam.</div>
-      <div className="foot-cont3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, ex!</div>
-      <div className="foot-cont4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, repellendus.</div> */}
+    <div className="footer-basic">
+      <footer>
+        <div className="social">
+          <a href="https://www.instagram.com/bloodwarriorsindiaofficial/" target="_blank" rel="noreferrer noopener">
+            <i className="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/BloodWarriorIn1" target="_blank" rel="noreferrer noopener">
+            <i className="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/Blood-Warriors-India-104384845523032" target="_blank" rel="noreferrer noopener">
+            <i className="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+        <ul className="list-inline">
+          <li className="list-inline-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="list-inline-item">
+            <Link to="/price">Price</Link>
+          </li>
+          <li className="list-inline-item">
+            <Link to="/service">Services</Link>
+          </li>
+          <li className="list-inline-item">
+            <Link to="/contact">Contact Us</Link>
+          </li>
+        </ul>
+        <p className="copyright">Online Laundary © 2022</p>
+      </footer>
     </div>
-  )
+  );
 }
+
+export default Footer;

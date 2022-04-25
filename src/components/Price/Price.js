@@ -1,38 +1,71 @@
-import React from "react";
+import React, {  useState } from "react";
 import "./Price.css";
 import PriceTable from "./PriceTable";
 import Grid from "@mui/material/Grid";
+import Cart from "../Cart/Cart";
 
-export default function Price() {
+export default function Price(props) {
+  const [show, setShow] = useState(null);
+
+  const handleClickSteam = () => {
+    setShow("steam");
+  };
+  const handleClickWash = () => {
+    setShow("wash");
+  };
+  const handleClickFold = () => {
+    setShow("fold");
+  };
+  const handleClickDry = () => {
+    setShow("dry");
+  };
   return (
-    <div className="price">
-      <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
-        <Grid item xs={12} sm={6} md={3} className="gridItem flex-column">
-          <div className="h3Class1 mb-4 ">
-          <h3>Steam Press</h3>
-           </div>
-          <PriceTable arrayName={SteamPress} />
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} className="gridItem flex-column">
-          <div className="h3Class2 mb-4 ">
-          <h3>Wash & Press</h3>
+    <>
+    <div className="price d-flex">
+      <Grid
+        container
+        rowSpacing={5}
+        columnSpacing={{ xs: 1, sm: 2, md: 2 }}
+        style={{ width: "50%", marginRight: "auto" }}
+      >
+        <Grid item xs={12} className="gridItem flex-column">
+          <div className="h3Class mb-4" onClick={handleClickSteam}>
+            <h3>Steam Press</h3>
           </div>
-          <PriceTable arrayName={WashPress} />
+          <div className={show === "steam" ? "active" : "steamPress"}>
+            <PriceTable arrayName={SteamPress} />
+          </div>
         </Grid>
-        <Grid item xs={12} sm={6} md={3} className="gridItem flex-column">
-          <div className="h3Class1 mb-4">
+        <Grid item xs={12} className="gridItem flex-column">
+          <div className="h3Class mb-4 " onClick={handleClickWash}>
+            <h3>Wash & Press</h3>
+          </div>
+          <div className={show === "wash" ? "active" : "steamPress"}>
+            <PriceTable arrayName={WashPress} />
+          </div>
+        </Grid>
+        <Grid item xs={12} className="gridItem flex-column">
+          <div className="h3Class mb-4" onClick={handleClickFold}>
             <h3>Wash & Fold</h3>
           </div>
-          <PriceTable arrayName={WashFold} />
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} className="gridItem flex-column">
-          <div className="h3Class2 mb-4">
-          <h3>Dry Cleaning</h3>
+          <div className={show === "fold" ? "active" : "steamPress"}>
+            <PriceTable arrayName={WashFold} />
           </div>
-          <PriceTable arrayName={DryCleaning} />
+        </Grid>
+        <Grid item xs={12} className="gridItem flex-column">
+          <div className="h3Class mb-4" onClick={handleClickDry}>
+            <h3>Dry Cleaning</h3>
+          </div>
+          <div className={show === "dry" ? "active" : "steamPress"}>
+            <PriceTable arrayName={DryCleaning} />
+          </div>
         </Grid>
       </Grid>
-    </div>
+      <div className=" d-flex align-items-center cart1 ps-5 " >
+       <Cart/>
+      </div>
+    </div>  
+      </>
   );
 }
 const SteamPress = [

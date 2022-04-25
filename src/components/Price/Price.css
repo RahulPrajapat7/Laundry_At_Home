@@ -1,4 +1,5 @@
 .price {
+  display: flex;
   background-color: aliceblue;
   padding: 15px;
 }
@@ -8,7 +9,7 @@
   /* border: 1px solid black; */
 }
 .price-table {
-  height: 75vh;
+  height: 60vh;
   overflow: auto;
 }
 .item {
@@ -16,15 +17,25 @@
   max-width: 500px;
   box-shadow: 1px 2px 1px blue;
 }
-.h3Class1{
-    border-radius: 30px;
-    background-color: #51f2ffb5;
-    padding:0px 55px 0px 55px ;
-    box-shadow: 1px 2px 3px 1px #2f3333b5;
+.item img {
+  width: 25px;
+  height: 25px;
 }
-.h3Class2{
-    border-radius: 30px;
-    background-color: #51f2ffb5;
-    padding:0px 55px 0px 55px ;
-    box-shadow: 1px 2px 3px 1px #2f3333b5;
+.h3Class {
+  border-radius: 30px;
+  background-color: #51f2ffb5;
+  padding: 0px 55px 0px 55px;
+  box-shadow: 1px 2px 3px 1px #2f3333b5;
+}
+.h3Class:hover {
+  cursor: pointer;
+}
+.steamPress {
+  display: none;
+}
+.active {
+  display: block;
+}
+.cart1{
+ padding-top: 0px;
 }
